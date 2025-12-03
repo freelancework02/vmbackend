@@ -18,7 +18,11 @@ const allowed = new Set([
   'http://127.0.0.1:5500',
   'http://localhost:5500',
   'http://127.0.0.1:3000',
-  'http://localhost:3000'
+  'http://localhost:3000',
+  'https://admin.futureplanhelp.com',
+  'https://futureplanhelp.com',
+  'http://localhost:5173',
+  'https://freelancework02.github.io'
 ]);
 
 app.use(cors({
