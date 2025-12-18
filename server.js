@@ -8,6 +8,8 @@ const blogRoutes = require('./Routes/blogRoutes');
 const eventsRoutes = require('./Routes/eventsRoutes')
 const dashboardRoutes = require('./Routes/dashboardRoutes')
 const authRoutes = require("./Routes/authRoutes")
+const contactRoutes = require("./Routes/contactRoutes");
+
 
 const PORT = process.env.PORT || 3000;
 
@@ -21,8 +23,8 @@ const allowed = new Set([
   'http://localhost:3000',
   'https://admin.futureplanhelp.com',
   'https://futureplanhelp.com',
-  'http://localhost:5173',
-  'https://freelancework02.github.io'
+  'https://www.futureplanhelp.com',
+  'http://localhost:5173'
 ]);
 
 app.use(cors({
@@ -53,6 +55,7 @@ app.use('/api/blogs', blogRoutes); // or app.use('/api', blogRoutes) if routes d
 app.use('/api/events', eventsRoutes); // or app.use('/api', blogRoutes) if routes define '/blogs' root
 app.use('/api/dashboard', dashboardRoutes); // or app.use('/api', blogRoutes) if routes define '/blogs' root
 app.use('/api/auth', authRoutes); // or app.use('/api', blogRoutes) if routes define '/blogs' root
+app.use('/api/contact', contactRoutes); // or app.use('/api', blogRoutes) if routes define '/blogs' root
 
  
 // Health route
